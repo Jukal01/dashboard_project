@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <h1>Your notes</h1>
+    <ul>
+    	{% for note in notes %}
+    	<li>
+    		{{ note }} 
+    		<small>
+    			<a href="{{ note.get_delete_url }}">Delete</a>
+    		</small>
+    		<small>
+    			<a href="{{ note.get_update_url }}">Update</a>
+    		</small>
+    	</li>
+    	{% endfor %}
+    </ul>
+</body>
+</html>
